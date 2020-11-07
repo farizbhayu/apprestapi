@@ -9,4 +9,6 @@ module.exports = function (app) {
   app.route('/tampil').get(myjson.tampilsemuamahasiswa);
   // step 10
   app.route('/tampil/:id').get(myjson.tampilberdasarkanid);
+  // Step 12
+  app.route('/tambah').post(myjson.tambahMahasiswa);
 };
