@@ -11,4 +11,6 @@ module.exports = function (app) {
   app.route('/tampil/:id').get(myjson.tampilberdasarkanid);
   // Step 12
   app.route('/tambah').post(myjson.tambahMahasiswa);
+  // Step 14
+  app.route('/ubah').put(myjson.ubahMahasiswa);
 };
