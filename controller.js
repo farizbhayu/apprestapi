@@ -76,3 +76,20 @@ exports.ubahMahasiswa = function (req, res) {
     }
   );
 };
+
+// Step 15
+// Menghapus mahasiswa berdasaarkan ID
+exports.hapusMahasiswa = function (req, res) {
+  var id = req.body.id_mahasiswa;
+  connection.query(
+    "DELETE FROM mahasiswa WHERE id_mahasiswa = ?",
+    [id],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok("Berhasil Menghapus Data", res);
+      }
+    }
+  );
+};
